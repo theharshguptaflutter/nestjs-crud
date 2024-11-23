@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { ServeStaticModule } from '@nestjs/serve-static/dist/serve-static.module';
 import { join } from 'path';
+import { UserModule } from './user/user.module';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
@@ -24,6 +25,7 @@ import { join } from 'path';
       autoLoadModels: false,
       synchronize: true,
     }),
+    UserModule,
   ],
   controllers: [],
   providers: [],
