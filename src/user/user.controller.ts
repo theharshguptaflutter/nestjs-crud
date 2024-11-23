@@ -10,11 +10,11 @@ export class UserController {
       await this.UserService.register(body, res);
     }
 
-    @Get('users')
+    @Get('/')
     async getAllUsers(@Res() res) {
       return await this.UserService.getAllUsers(res);
     }
-    @Get('user/:user_id')
+    @Get('/:user_id')
     async getAllUserById(@Param() param, @Res() res) {
       return await this.UserService.getUserById(param,res);
     }
