@@ -7,4 +7,17 @@ export class UserService {
     constructor(
         @InjectModel(User) private userModel: typeof User,
       ) {}
+
+
+      async register(body, res){
+        console.log("User Resister Service");
+        
+      }
+      async getAllUsers(res){
+        console.log("Find All User Service");
+
+      }
+      async getUserById(param,res){
+        console.log("Get User By Id Service");
+      }
 }
