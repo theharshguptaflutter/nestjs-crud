@@ -31,6 +31,8 @@ export class User extends Model {
 
   @Column({ defaultValue: 0 })
   user_account_delete_flag: number;
+  @Column({ defaultValue: 0 })
+  user_rating_flag: number;
 
 } 
 

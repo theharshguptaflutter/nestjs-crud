@@ -1,5 +1,6 @@
-import { Body, Controller, Delete, Get, Param, Post, Res } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Res,  } from '@nestjs/common';
 import {UserService} from './user.service';
+
 @Controller('user')
 export class UserController {
     constructor(private UserService: UserService) {}
@@ -22,4 +23,9 @@ export class UserController {
     async deleteUserById(@Param() param, @Res() res) {
       return await this.UserService.deleteUserById(param,res);
     }
+    @Patch('list')
+    async userEdit(@Body() body, @Res() res) {
+      return await this.UserService.userRatingEdit(body,res);
+    }
 }
+

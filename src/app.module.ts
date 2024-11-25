@@ -4,6 +4,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { ServeStaticModule } from '@nestjs/serve-static/dist/serve-static.module';
 import { join } from 'path';
 import { UserModule } from './user/user.module';
+import { User } from './models/user/user.model';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
@@ -20,7 +21,7 @@ import { UserModule } from './user/user.module';
       password: process.env.PASSWORD,
       database: process.env.DATABASE_NAME,
       models: [
-       
+        User
       ],    
       autoLoadModels: false,
       synchronize: true,
