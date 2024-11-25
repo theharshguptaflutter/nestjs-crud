@@ -20,4 +20,7 @@ export class UserService {
       async getUserById(param,res){
         console.log("Get User By Id Service");
       }
+      async deleteUserById(param,res){
+        console.log("Delete User By Id Service");
+      }
 }
